@@ -1,0 +1,33 @@
+const port = 3000;
+const rootDir = "./",
+      docsAssets = rootDir + "docs-assets/",
+      docsCss = docsAssets + "css/",
+      docsJs = docsAssets + "js/",
+      sassFolder = rootDir + "scss/",
+      sassFiles = sassFolder + "**/*.scss",
+      sassMain = sassFolder + "grid-system.scss",
+      pugFolder = rootDir + "pug/",
+      pugFiles = pugFolder + "**/*.pug",
+      pugMain = pugFolder + "index.pug",
+      cssFolder = rootDir + "css/",
+      jsList = [],
+      cssList = [],
+      specFiles = rootDir + "spec/**/*.[s|s]pec.js";
+
+module.exports = {
+  rootDir,
+  docsAssets,
+  docsCss,
+  docsJs,
+  jsList,
+  cssList,
+  sassFolder,
+  sassFiles,
+  sassMain,
+  cssFolder,
+  pugFolder,
+  pugFiles,
+  pugMain,
+  port,
+  specFiles,
+}

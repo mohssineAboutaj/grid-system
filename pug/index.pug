@@ -1,0 +1,26 @@
+//- include variables
+include partials/variables
+
+doctype
+html(lang="en")
+	head
+		//- include head
+		include partials/head
+	body
+		//- include grid component
+		include extends/grid.component.pug
+
+		//-+grid()
+		-
+			var x = `
+				<h2>hello</h2>
+				
+				<div>lorem ipsum dolor sit amet</div>
+			`
+
+		| #{x}
+		| !{+grid}
+
+
+		//- include footer
+		include partials/footer

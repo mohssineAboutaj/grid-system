@@ -1,0 +1,13 @@
+/**
+ * Name: @grid-system-kech
+ * Description: A simple grid system with 5 screen sizes (xs, sm, md, lg, xl) to make your design responsive with maximum media resolutions
+ * Authour: @mohssineAboutaj
+ * Repo URL: https://github.com/mohssineAboutaj/grid-system-kech
+ */
+@import './_variables';
+
+@import './mixins/mixin.grid.scss';
+
+@import './_grid';
+
+@import './_global';

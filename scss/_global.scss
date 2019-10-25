@@ -1,0 +1,28 @@
+.row,
+.row-around,
+.row-between,
+.hor-center,
+.horizontal-center,
+.ver-center,
+.vertical-center {
+	display: flex;
+  flex-wrap: wrap;
+}
+
+.row-around {
+	justify-content: space-around;
+}
+
+.row-between {
+	justify-content: space-between;
+}
+
+.horizontal-center,
+.hor-center {
+	justify-content: center;
+}
+
+.vertical-center,
+.ver-center {
+	align-items: center;
+}

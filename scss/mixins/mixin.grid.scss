@@ -1,0 +1,10 @@
+// mixin to generate grid
+@mixin grid-generator($size, $sufix) {
+	@media #{$size} {
+		@for $i from $base-grid through $max-grid {
+			.grid-#{$i}-#{$sufix} {
+				width: ($i / $max-grid) * 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,8 @@
+mixin grid(col = 8, sm = 6, md = 4, lg = 3, xl = 2)
+	.row
+		-var i = 1
+		while i <= col
+			-i++
+			div(class=`grid-${sm}-sm grid-${md}-md grid-${lg}-lg grid-${xl}-xl`)
+				.box
+					| Lorem ipsum dolor sit amet, consectet.

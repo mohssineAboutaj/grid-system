@@ -1,0 +1,36 @@
+// Media Query Ranges & grid variables
+$base-grid: 1;
+$max-grid: 12;
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+$sm-up: $sm + 1;
+$md-up: $md + 1;
+$lg-up: $lg + 1;
+$xl-up: $xl + 1;
+
+$sm-down: $sm;
+$md-down: $md;
+$lg-down: $lg;
+$xl-down: $xl;
+
+// grid for min width
+$sm-and-up: "only screen and (min-width: #{$sm-up})";
+$md-and-up: "only screen and (min-width: #{$md-up})";
+$lg-and-up: "only screen and (min-width: #{$lg-up})";
+$xl-and-up: "only screen and (min-width: #{$xl-up})";
+
+// grid for max width
+$sm-and-down: "only screen and (max-width: #{$sm-down})";
+$md-and-down: "only screen and (max-width: #{$md-down})";
+$lg-and-down: "only screen and (max-width: #{$lg-down})";
+$xl-and-down: "only screen and (max-width: #{$xl-down})";
+
+// grid for an exact width
+$sm-only: $sm-and-down;
+$md-only: "only screen and (min-width: #{$sm-up}) and (max-width: #{$md})";
+$lg-only: "only screen and (min-width: #{$md-up}) and (max-width: #{$lg})";
+$xl-only: $xl-and-up;

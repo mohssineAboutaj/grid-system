@@ -1,0 +1,40 @@
+{
+  "name": "@kech/grid-system",
+  "version": "1.0.0",
+  "description": "A simple grid system with 4 screen sizes (sm, md, lg, xl) based on bootstrap sizes to make your design responsive with maximum media resolutions",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp test-task",
+    "test:watch": "gulp test-watch-task",
+    "dev": "gulp",
+    "build:css": "rm -fr css/ && gulp build-task",
+    "build": "gulp build-docs-task"
+  },
+  "keywords": [
+    "gulp",
+    "sass",
+    "scss",
+    "responsive",
+    "grid",
+    "grid system"
+  ],
+  "author": "Mohssine Aboutaj",
+  "license": "MIT",
+  "browserslist": [
+    "last 2 version",
+    "> 2%"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "3.9.0",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cli": "^2.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-jasmine": "^4.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "highlightjs": "^9.12.0"
+  }
+}

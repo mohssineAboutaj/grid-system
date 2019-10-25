@@ -1,0 +1,36 @@
+// generate grid classes based on the mixin @grid-generator
+
+@include grid-generator($sm-and-up, 'sm')
+@include grid-generator($md-and-up, 'md')
+@include grid-generator($lg-and-up, 'lg')
+@include grid-generator($xl-and-up, 'xl')
+
+@include grid-generator($sm-and-up, 'sm-and-up')
+@include grid-generator($md-and-up, 'md-and-up')
+@include grid-generator($lg-and-up, 'lg-and-up')
+@include grid-generator($xl-and-up, 'xl-and-up')
+
+@include grid-generator($sm-and-up, 'sm-and-down')
+@include grid-generator($md-and-up, 'md-and-down')
+@include grid-generator($lg-and-up, 'lg-and-down')
+@include grid-generator($xl-and-up, 'xl-and-down')
+
+@include grid-generator($sm-only, 'sm-only')
+@include grid-generator($md-only, 'md-only')
+@include grid-generator($lg-only, 'lg-only')
+@include grid-generator($xl-only, 'xl-only')
+
+@include grid-generator($sm-and-up, 'sm-and-up')
+@include grid-generator($md-and-up, 'md-and-up')
+@include grid-generator($lg-and-up, 'lg-and-up')
+@include grid-generator($xl-and-up, 'xl-and-up')
+
+@include grid-generator($sm-and-up, 'sm-and-up')
+@include grid-generator($md-and-up, 'md-and-up')
+@include grid-generator($lg-and-up, 'lg-and-up')
+@include grid-generator($xl-and-up, 'xl-and-up')
+
+@include grid-generator($sm-only, 'sm-only')
+@include grid-generator($md-only, 'md-only')
+@include grid-generator($lg-only, 'lg-only')
+@include grid-generator($xl-only, 'xl-only')
