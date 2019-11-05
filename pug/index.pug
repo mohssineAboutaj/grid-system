@@ -7,19 +7,23 @@ html(lang="en")
 		//- include head
 		include partials/head
 	body
-		//- include grid component
-		include extends/grid.component.pug
 
-		//-+grid()
-		-
-			var x = `
-				<h2>hello</h2>
-				
-				<div>lorem ipsum dolor sit amet</div>
-			`
+		.row
+			aside.grid-2-md
+				//- include sidebar
+				include partials/sidebar
 
-		| #{x}
-		| !{+grid}
+			main.grid-10-md
+				//- include grid component
+				include extends/grid.component.pug
+
+				.container
+					h3 grid
+					+grid()
+
+					h3 grid docs
+					+gridDocs()
+
 
 
 		//- include footer

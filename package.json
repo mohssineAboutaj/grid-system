@@ -6,6 +6,7 @@
   "scripts": {
     "test": "gulp test-task",
     "test:watch": "gulp test-watch-task",
+    "start": "gulp",
     "dev": "gulp",
     "build:css": "rm -fr css/ && gulp build-task",
     "build": "gulp build-docs-task"
@@ -36,5 +37,17 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "highlightjs": "^9.12.0"
-  }
+  },
+  "directories": {
+		"doc": "docs",
+		"test": "spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohssineAboutaj/grid-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mohssineAboutaj/grid-system/issues"
+  },
+  "homepage": "https://github.com/mohssineAboutaj/grid-system#readme"
 }

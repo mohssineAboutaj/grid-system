@@ -11,7 +11,7 @@ const gulp = require('gulp'),
 
 // get path of files & folder
 const {
-  rootDir,
+  docs,
   docsCss,
   docsJs,
   jsList,
@@ -63,12 +63,12 @@ gulp.task('pug-task', () => {
         pretty: true,
       }))
       .on('error', handleErr)
-      .pipe(gulp.dest(rootDir))
+      .pipe(gulp.dest(docs))
       .pipe(browserSync.stream())
 });
 
 // javaScript task for docs
-gulp.src('docs-js-task', () => {
+gulp.task('docs-js-task', () => {
   gulp.src(jsList)
       .pipe(gulpConcatJs("docs.script.js"))
       .pipe(gulp.dest(docsJs))
@@ -76,7 +76,7 @@ gulp.src('docs-js-task', () => {
 });
 
 // javaScript task for docs
-gulp.src('docs-css-task', () => {
+gulp.task('docs-css-task', () => {
   gulp.src(cssList)
       .pipe(gulpConcatCss("docs.style.css"))
       .pipe(gulp.dest(docsCss))
@@ -105,7 +105,7 @@ gulp.task('test-watch-task', ['test-task'], () => {
 // server & hotReload taks
 gulp.task('server-task', () => {
   browserSync.init({
-    server: rootDir,
+    server: docs,
     port: port,
     ui: false,
   })
@@ -118,6 +118,12 @@ gulp.task('watch-task', () => {
 
   // watch pug files & run the pug task
   gulp.watch(pugFiles, ['pug-task']);
+
+  // watch css files & run the pug task
+  gulp.watch(cssList, ['docs-css-task']);
+
+  // watch pug files & run the pug task
+  gulp.watch(jsList, ['docs-js-task']);
 });
 
 // default task

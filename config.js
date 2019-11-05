@@ -1,8 +1,11 @@
 const port = 3000;
 const rootDir = "./",
+      docs = rootDir + "docs/",
+      docsCss = docs + "css/",
+      docsJs = docs + "js/",
       docsAssets = rootDir + "docs-assets/",
-      docsCss = docsAssets + "css/",
-      docsJs = docsAssets + "js/",
+      docsCssAssets = docsAssets + "css/",
+      docsJsAssets = docsAssets + "js/",
       sassFolder = rootDir + "scss/",
       sassFiles = sassFolder + "**/*.scss",
       sassMain = sassFolder + "grid-system.scss",
@@ -10,12 +13,20 @@ const rootDir = "./",
       pugFiles = pugFolder + "**/*.pug",
       pugMain = pugFolder + "index.pug",
       cssFolder = rootDir + "css/",
-      jsList = [],
-      cssList = [],
+      jsList = [
+				'./node_modules/highlightjs/highlight.pack.min.js',
+				docsJsAssets + "script.js",
+      ],
+      cssList = [
+        './node_modules/highlightjs/styles/monokai-sublime.css',
+        './css/grid-system.css',
+        docsCssAssets + "style.css",
+      ],
       specFiles = rootDir + "spec/**/*.[s|s]pec.js";
 
 module.exports = {
   rootDir,
+  docs,
   docsAssets,
   docsCss,
   docsJs,
