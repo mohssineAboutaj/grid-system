@@ -2,23 +2,35 @@
 
 A simple grid system with 5 screen sizes (xs, sm, md, lg, xl) based on bootstrap sizes to make your design responsive with maximum media resolutions
 
-## Developement
-To develope this project you need to use  [npm](https://npmjs.org) or [yarn](https://yarnpkg.org)
+## Install
+avaliable installing ways
++ npm
+```npm install --save @kech/grid-system```
++ yarn
+```yarn add --save @kech/grid-system```
++ Download
+go to [https://github.com/mohssineAboutaj/grid-system](https://github.com/mohssineAboutaj/grid-system), download the zip or clone the repo, copy css file exist on the path `css/grid-system.css` or `css/grid-system.min.css`, then follow usage steps bellow
 
-### install dependencies 
-```npm install``` or ```yarn install```
+## Usage
 
-### Run Dev Server ( with reload )
-```npm start``` or ```yarn start```
-if the browser doesn't open automaticly open this url [localhost:3000](http://localhsot:3000)
+1. ##### Import css file
+``<link rel="stylesheet" href=PATH_OF_CSS_FILE />``
+<b>Note: dont forget to replace the <i>PATH_OF_CSS_FILE</i> with a real path of the css file</b>
 
-## Build
-### Build css
-```npm run build:css``` or ```yarn build:css```
-than you can find the build files in ```/css``` 
-### Build docs
-```npm run build``` or ```yarn build```
+2. ##### Use css classes
+```
+<div class="row">
+	<div class="grid-6-md">
+		size 6 columns in medium screens & up
+	</div>
+	<div class="grid-6-md">
+		size 6 columns in medium screens & up
+	</div>
+</div>
+```
 
+## Documentation
+[Full documentation & more info](https://mohssineAboutaj.github.io/grid-system/)
 
 ## License
 [MIT](https://en.wikipedia.org/wiki/MIT_LICENSE) @mohssineAboutaj

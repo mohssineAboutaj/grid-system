@@ -1489,14 +1489,25 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 }
 
 .row,
+.row.no-wrap,
 .row-around,
 .row-between,
-.hor-center,
 .horizontal-center,
-.ver-center,
-.vertical-center {
+.hor-center,
+.vertical-center,
+.ver-center {
   display: flex;
   flex-wrap: wrap;
+}
+
+.no-wrap.row,
+.no-wrap.row-around,
+.no-wrap.row-between,
+.no-wrap.horizontal-center,
+.no-wrap.hor-center,
+.no-wrap.vertical-center,
+.no-wrap.ver-center {
+  flex-wrap: nowrap;
 }
 
 .row-around {
@@ -1515,61 +1526,4 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 .vertical-center,
 .ver-center {
   align-items: center;
-}
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.box {
-  background-color: #ccc;
-  height: 50px;
-  margin: 10px;
-  padding: 5px;
-  border: 1px solid #888;
-}
-
-.container {
-  max-width: 1500px;
-  width: 95%;
-  margin: 0 auto;
-}
-
-.text-center {
-  text-align: center;
-}
-
-aside {
-  background-color: #eee;
-}
-
-.sidebar {
-  padding: 10px;
-}
-
-.sidebar .content-list {
-  list-style-type: none;
-  padding: 10px;
-}
-
-.sidebar .content-list .content-item {
-  margin: 10px 0;
-}
-
-.sidebar .content-list .content-item a {
-  text-decoration: none;
-  text-transform: capitalize;
-}
-
-footer {
-  background-color: #eee;
-  padding: 20px;
-  margin: 0;
-}
-
-@media (max-width: 576px) {
-  .container {
-    width: 100%;
-  }
 }

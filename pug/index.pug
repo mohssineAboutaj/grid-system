@@ -8,21 +8,43 @@ html(lang="en")
 		include partials/head
 	body
 
-		.row
-			aside.grid-2-md
-				//- include sidebar
-				include partials/sidebar
+		.container
+			.row
+				aside.grid-2-md
+					//- include sidebar
+					include partials/sidebar
 
-			main.grid-10-md
-				//- include grid component
-				include extends/grid.component.pug
+				main.grid-10-md
+					//- include overview section
+					include sections/overview.pug
 
-				.container
-					h3 grid
-					+grid()
+					//- include getting started section
+					include sections/getting-started.pug
 
-					h3 grid docs
-					+gridDocs()
+					//- include grid component
+					//- include extends/grid.component.pug
+
+					h2 basic grid
+					-var max = 4
+					h3 no wrapping
+					p show #{max} columns in every screen without any wrapping
+					.row.no-wrap
+						-var i = 1
+						while i <= max
+							.grid
+								.box.
+									column #{i} of #{max}
+							-i++
+					h3 with wrapping
+					p show #{max} columns in every screen with wrapping mode
+					.row
+						-var i = 1
+						while i <= max
+							.grid
+								.box.
+									column #{i} of #{max}
+							-i++
+
 
 
 

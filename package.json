@@ -4,12 +4,13 @@
   "description": "A simple grid system with 4 screen sizes (sm, md, lg, xl) based on bootstrap sizes to make your design responsive with maximum media resolutions",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "gulp test-task",
-    "test:watch": "gulp test-watch-task",
     "start": "gulp",
     "dev": "gulp",
     "build:css": "rm -fr css/ && gulp build-task",
-    "build": "gulp build-docs-task"
+		"build": "gulp build-docs-task",
+		"deploy": "gh-pages -d docs",
+    "test": "gulp test-task",
+    "test:watch": "gulp test-watch-task"
   },
   "keywords": [
     "gulp",
@@ -35,12 +36,7 @@
     "gulp-jasmine": "^4.0.0",
     "gulp-pug": "^4.0.1",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "highlightjs": "^9.12.0"
-  },
-  "directories": {
-		"doc": "docs",
-		"test": "spec"
+    "gulp-sass": "^4.0.2"
   },
   "repository": {
     "type": "git",
@@ -49,5 +45,9 @@
   "bugs": {
     "url": "https://github.com/mohssineAboutaj/grid-system/issues"
   },
-  "homepage": "https://github.com/mohssineAboutaj/grid-system#readme"
+  "homepage": "https://mohssineAboutaj.github.io/grid-system",
+  "dependencies": {
+    "highlightjs": "^9.16.2",
+    "gh-pages": "^2.1.1"
+  }
 }

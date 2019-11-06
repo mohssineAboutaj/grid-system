@@ -1,28 +1,31 @@
-.row,
-.row-around,
-.row-between,
-.hor-center,
-.horizontal-center,
-.ver-center,
-.vertical-center {
+.row {
 	display: flex;
   flex-wrap: wrap;
 }
 
+.row.no-wrap {
+	@extend .row;
+	flex-wrap: nowrap;
+}
+
 .row-around {
+	@extend .row;
 	justify-content: space-around;
 }
 
 .row-between {
+	@extend .row;
 	justify-content: space-between;
 }
 
 .horizontal-center,
 .hor-center {
+	@extend .row;
 	justify-content: center;
 }
 
 .vertical-center,
 .ver-center {
+	@extend .row;
 	align-items: center;
 }

@@ -1,0 +1,156 @@
+/**
+ * This file using to customize the documetation style
+ */
+
+/* import fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900|Open+Sans:400,800&display=swap');
+
+// define fonts & set a function to use it
+@function fonts($font-name) {
+	// colors
+	$primary-font: 'Montserrat', sans-serif;
+	$secondary-font: 'Open Sans', sans-serif;
+
+	// map of these colors
+	$fonts-list: (
+		'primary': $primary-font,
+		'secondary': $secondary-font
+	);
+
+	// return a colors by argument value
+	@return map-get($fonts-list, $font-name)
+};
+
+// define colors & set a function to use it
+@function colors($color-name) {
+	// colors
+	$primary: #ccc;
+
+	// map of these colors
+	$colors-list: (
+		primary: $primary,
+		secondary: lighten($primary, 10%),
+		third: darken($primary, 50%),
+	);
+
+	// return a colors by argument value
+	@return map-get($colors-list, $color-name)
+};
+
+/* Start reset */
+html, body {
+	color: colors(third);
+	margin: 0;
+	padding: 0;
+}
+/* End reset */
+
+/* Start global classes */
+.box {
+	background-color: colors('primary');
+	height: 50px;
+	margin: 10px;
+	padding: 5px;
+	border: 1px solid #888;
+}
+
+.container {
+	max-width: 1500px;
+	width: 95%;
+	margin: 0 auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+%text-capitalize {
+	text-transform: capitalize;
+}
+
+%text-uppercase {
+	text-transform: uppercase;
+}
+
+%heading-global-style {
+	font-family: fonts('primary');
+	color: colors(third);
+	font-weight: 700;
+	@extend %text-capitalize;
+}
+
+@for $i from 1 through 6 {
+	h#{$i} {
+		@extend %heading-global-style;
+	}
+}
+
+p {
+	font-family: fonts('secondary');
+}
+/* End global classes */
+
+/* Start sidebar */
+aside {
+	background-color: colors('secondary');
+	position: relative;
+
+	.sidebar {
+		padding: 10px;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+
+		.brand, .logo {
+			font-family: fonts('primary');
+			font-weight: 400;
+			font-size: 1.5em;
+			@extend %text-uppercase;
+		}
+
+		.content-list {
+			list-style-type: none;
+			padding: 10px;
+
+			.content-item {
+				margin: 10px 0;
+
+				a {
+					text-decoration: none;
+					text-transform: capitalize;
+				}
+			}
+		}
+	}
+}
+/* End sidebar */
+
+/* Start main content */
+main {
+	.section {
+		padding: 10px;
+		margin: 10px 0;
+	}
+}
+/* End main content */
+
+/* Start footer */
+footer {
+	background-color: colors('secondary');
+	padding: 20px;
+	margin: 0;
+}
+/* End footer */
+
+/* Start query customize */
+@media (max-width: 576px) {
+	.container {
+		width: 100%;
+	}
+}
+/* End query customize */

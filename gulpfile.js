@@ -12,8 +12,12 @@ const gulp = require('gulp'),
 // get path of files & folder
 const {
   docs,
-  docsCss,
-  docsJs,
+	docsCss,
+	docsCssFiles,
+	docsJs,
+	docsJsFiles,
+	docsSassFiles,
+	docsSassMain,
   jsList,
   cssList,
   sassFiles,
@@ -83,6 +87,15 @@ gulp.task('docs-css-task', () => {
       .pipe(browserSync.stream())
 });
 
+// sass task for docs
+gulp.task('docs-sass-task', () => {
+  return gulp.src(docsSassMain)
+        .pipe(gulpSass())
+        .on('error', handleErr)
+        .pipe(gulp.dest(docsCss))
+        .pipe(browserSync.stream())
+});
+
 // build docs task
 gulp.task('build-docs-task', [
   'pug-task',
@@ -120,10 +133,13 @@ gulp.task('watch-task', () => {
   gulp.watch(pugFiles, ['pug-task']);
 
   // watch css files & run the pug task
-  gulp.watch(cssList, ['docs-css-task']);
+  gulp.watch([cssList, docsCssFiles], ['docs-css-task']);
 
-  // watch pug files & run the pug task
-  gulp.watch(jsList, ['docs-js-task']);
+  // watch javaScript files & run the pug task
+  gulp.watch([jsList, docsJsFiles], ['docs-js-task']);
+
+  // watch docs sass files & run the pug task
+  gulp.watch(docsSassFiles, ['docs-sass-task']);
 });
 
 // default task
