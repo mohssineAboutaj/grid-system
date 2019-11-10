@@ -1,31 +1,31 @@
 #getting-started.section
 	h2 getting started
 	h3 Install
-	p avaliable installing ways
+	p avaliable installing ways, choose one of them
 	ul
 		li npm
-		| npm install --save @kech/grid-system
+		| #[pre #[code.html npm install --save @kech/grid-system]]
 		li yarn
-		| yarn add --save @kech/grid-system
+		| #[pre #[code.html yarn add --save @kech/grid-system]]
 		li Download
-		| go to #[a(href="https://github.com/mohssineAboutaj/grid-system") https://github.com/mohssineAboutaj/grid-system], download the zip or clone the repo, copy css file exist on the path #[pre #[code css/grid-system.css]] or #[pre #[code css/grid-system.min.css]], then follow usage steps bellow
+		| go to #[a(href="https://github.com/mohssineAboutaj/grid-system") https://github.com/mohssineAboutaj/grid-system], download the zip or clone the repo, copy css file exist on the path #[pre #[code.html css/grid-system.css]] or #[pre #[code.html css/grid-system.min.css]], then follow usage steps bellow
 	h3 usage
-	ul
+	ol
 		li
-			h5 Import css file
+			h4 Import css file
 			pre
 				code.html
 					| #{new String(`<link rel="stylesheet" href=PATH_OF_CSS_FILE />`)}
 			b Note: dont forget to replace the #[i PATH_OF_CSS_FILE] with a real path of the css file
 		li
-			h5 Use css classes
+			h4 Use css classes
 			pre
 				code.html.
 					#{new String(`<div class="row">`)}
 						#{new String(`<div class="grid-6-md">`)}
-								#{new String(`size 6 columns in medium screens & up`)}
-							#{new String(`</div>`)}
-							#{new String(`<div class="grid-6-md">`)}
-								#{new String(`size 6 columns in medium screens & up`)}
-							#{new String(`</div>`)}
+							#{new String(`size 6 columns in medium screens & up`)}
 						#{new String(`</div>`)}
+						#{new String(`<div class="grid-6-md">`)}
+							#{new String(`size 6 columns in medium screens & up`)}
+						#{new String(`</div>`)}
+					#{new String(`</div>`)}

@@ -2,13 +2,8 @@
 	.brand #{title}
 
 	ul.content-list
-		li.content-item
-			a(href="#overview") overview
-		li.content-item
-			a(href="#getting-started") getting started
-		li.content-item
-			a(href="#item-3") item 3
-		li.content-item
-			a(href="#item-4") item 4
-		li.content-item
-			a(href="#item-5") item 5
+		//- sidebarLink exist in variables.pug 
+		each link in sidebarLinks
+			li.content-item
+				a(href=`#${link.replace(/ /g, '-').toLowerCase()}`).
+					#{link.replace(/-/g, ' ')} 

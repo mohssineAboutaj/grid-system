@@ -7,10 +7,8 @@
     "start": "gulp",
     "dev": "gulp",
     "build:css": "rm -fr css/ && gulp build-task",
-		"build": "gulp build-docs-task",
-		"deploy": "gh-pages -d docs",
-    "test": "gulp test-task",
-    "test:watch": "gulp test-watch-task"
+    "build": "gulp build-docs-task",
+    "deploy": "gh-pages -d docs"
   },
   "keywords": [
     "gulp",
@@ -30,10 +28,10 @@
     "browser-sync": "^2.26.7",
     "gulp": "3.9.0",
     "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
     "gulp-cli": "^2.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-concat-css": "^3.1.0",
-    "gulp-jasmine": "^4.0.0",
     "gulp-pug": "^4.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2"
@@ -47,7 +45,7 @@
   },
   "homepage": "https://mohssineAboutaj.github.io/grid-system",
   "dependencies": {
-    "highlightjs": "^9.16.2",
-    "gh-pages": "^2.1.1"
+    "gh-pages": "^2.1.1",
+    "highlightjs": "^9.16.2"
   }
 }

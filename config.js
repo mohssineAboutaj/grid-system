@@ -1,5 +1,5 @@
 const port = 3000;
-const rootDir = "./",
+let rootDir = "./",
       docs = rootDir + "docs/",
       docsCss = docs + "css/",
       docsJs = docs + "js/",
@@ -21,8 +21,7 @@ const rootDir = "./",
       cssList = [
         './node_modules/highlightjs/styles/monokai-sublime.css',
         './css/grid-system.css',
-      ],
-      specFiles = rootDir + "spec/**/*.[s|S]pec.js";
+      ];
 
 module.exports = {
   rootDir,
@@ -44,5 +43,4 @@ module.exports = {
   pugFiles,
   pugMain,
   port,
-  specFiles,
 }

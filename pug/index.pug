@@ -21,29 +21,8 @@ html(lang="en")
 					//- include getting started section
 					include sections/getting-started.pug
 
-					//- include grid component
-					//- include extends/grid.component.pug
-
-					h2 basic grid
-					-var max = 4
-					h3 no wrapping
-					p show #{max} columns in every screen without any wrapping
-					.row.no-wrap
-						-var i = 1
-						while i <= max
-							.grid
-								.box.
-									column #{i} of #{max}
-							-i++
-					h3 with wrapping
-					p show #{max} columns in every screen with wrapping mode
-					.row
-						-var i = 1
-						while i <= max
-							.grid
-								.box.
-									column #{i} of #{max}
-							-i++
+					//- include basic section
+					include sections/basic.pug
 
 
 

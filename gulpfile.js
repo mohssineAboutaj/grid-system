@@ -1,16 +1,16 @@
 const gulp = require('gulp'),
       gulpSass = require('gulp-sass'),
       gulpPug = require('gulp-pug'),
-      gulpJasmine = require('gulp-jasmine'),
       gulpConcatCss = require('gulp-concat-css'),
       gulpConcatJs = require('gulp-concat'),
       browserSync = require('browser-sync'),
       gulpRename = require('gulp-rename'),
-      gulpAutoprefixer = require('gulp-autoprefixer'),
+			gulpAutoprefixer = require('gulp-autoprefixer'),
+			gulpCssMinify = require('gulp-clean-css'),
       config = require('./config');
 
 // get path of files & folder
-const {
+let {
   docs,
 	docsCss,
 	docsCssFiles,
@@ -26,7 +26,6 @@ const {
   pugMain,
   cssFolder,
   port,
-  specFiles,
 } = config;
 
 // fuction to handle the errors
@@ -37,11 +36,11 @@ function handleErr(err) {
 }
 
 gulp.task('sass-task', () => {
-  return gulp.src(sassMain)
-        .pipe(gulpSass())
-        .on('error', handleErr)
-        .pipe(gulp.dest(cssFolder))
-        .pipe(browserSync.stream())
+  gulp.src(sassMain)
+			.pipe(gulpSass())
+			.on('error', handleErr)
+			.pipe(gulp.dest(cssFolder))
+			.pipe(browserSync.stream())
 });
 
 // build task
@@ -79,7 +78,15 @@ gulp.task('docs-js-task', () => {
       .pipe(browserSync.stream())
 });
 
-// javaScript task for docs
+// build javaScript task for docs
+gulp.task('docs-js-task:build', () => {
+	gulp.src(jsList)
+      .pipe(gulpConcatJs("docs.script.js"))
+			.pipe(gulp.dest(docsJs))
+      .pipe(browserSync.stream())
+});
+
+// css task for docs
 gulp.task('docs-css-task', () => {
   gulp.src(cssList)
       .pipe(gulpConcatCss("docs.style.css"))
@@ -87,33 +94,43 @@ gulp.task('docs-css-task', () => {
       .pipe(browserSync.stream())
 });
 
+// build css task for docs
+gulp.task('docs-css-task:build', () => {
+  gulp.src(cssList)
+			.pipe(gulpConcatCss("docs.style.css"))
+			.pipe(gulpCssMinify())
+      .pipe(gulp.dest(docsCss))
+      .pipe(browserSync.stream())
+});
+
 // sass task for docs
 gulp.task('docs-sass-task', () => {
-  return gulp.src(docsSassMain)
-        .pipe(gulpSass())
-        .on('error', handleErr)
-        .pipe(gulp.dest(docsCss))
-        .pipe(browserSync.stream())
+  gulp.src(docsSassMain)
+			.pipe(gulpSass())
+			.on('error', handleErr)
+			.pipe(gulp.dest(docsCss))
+			.pipe(browserSync.stream())
+});
+
+// build sass task for docs
+gulp.task('docs-sass-task:build', () => {
+  gulp.src(docsSassMain)
+			.pipe(gulpSass({
+				outputStyle: 'compressed',
+			}))
+			.on('error', handleErr)
+			.pipe(gulp.dest(docsCss))
+			.pipe(browserSync.stream())
 });
 
 // build docs task
 gulp.task('build-docs-task', [
   'pug-task',
   'sass-task',
-  'docs-css-task',
-  'docs-js-task',
+  'docs-sass-task:build',
+  'docs-css-task:build',
+  'docs-js-task:build',
 ]);
-
-// testing task
-gulp.task('test-task', () => {
-  gulp.src(specFiles)
-      .pipe(gulpJasmine());
-});
-
-// testing with watching task
-gulp.task('test-watch-task', ['test-task'], () => {
-  gulp.watch(specFiles, ['test-task'])
-});
 
 // server & hotReload taks
 gulp.task('server-task', () => {

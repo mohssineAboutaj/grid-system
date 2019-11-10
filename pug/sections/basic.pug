@@ -1,0 +1,32 @@
+-
+	var max = 4
+	var i = 1
+
+#basic.section
+	h2 basic grid
+	p A basic columns usage with & without row wrapping
+	h3 no wrapping
+	p show #{max} columns in every screen without any wrapping
+	.row.no-wrap
+		while i <= max
+			.grid
+				.box.
+					column #{i} of #{max}
+			-i++
+	pre
+		code.html
+			while i <= max
+				| #{new String(`<div class="row no-wrap">`)}
+					| #{new String(`<div class="grid">`)}
+						| column #{i} of #{max}
+					| #{new String(`</div>`)}
+				| #{new String(`</div>`)}
+				-i++
+	h3 with wrapping
+	p show #{max} columns in every screen with wrapping mode
+	.row
+		while i <= max
+			.grid
+				.box.
+					column #{i} of #{max}
+			-i++
