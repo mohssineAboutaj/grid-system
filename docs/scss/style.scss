@@ -136,6 +136,13 @@ main {
 		padding: 10px;
 		margin: 10px 0;
 	}
+	#install {
+		li {
+			font-family: fonts('secondary');
+			font-weight: 700;
+			@extend %text-uppercase;
+		}
+	}
 }
 /* End main content */
 
