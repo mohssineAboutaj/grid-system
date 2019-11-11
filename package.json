@@ -6,8 +6,8 @@
   "scripts": {
     "start": "gulp",
     "dev": "gulp",
-    "build:css": "rm -fr css/ && gulp build-task",
-    "build": "gulp build-docs-task",
+    "build:css": "rm -fr css/ && gulp build-css-task",
+    "build": "gulp build-docs-task && cp css/*.css docs/css/",
     "deploy": "gh-pages -d docs"
   },
   "keywords": [

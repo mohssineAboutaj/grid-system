@@ -1,6 +1,4 @@
--
-	var max = 4
-	var i = 1
+- var max = 4
 
 #basic.section
 	h2 basic grid
@@ -8,6 +6,7 @@
 	h3 no wrapping
 	p show #{max} columns in every screen without any wrapping
 	.row.no-wrap
+		-var i = 1
 		while i <= max
 			.grid
 				.box.
@@ -15,18 +14,34 @@
 			-i++
 	pre
 		code.html
-			while i <= max
-				| #{new String(`<div class="row no-wrap">`)}
-					| #{new String(`<div class="grid">`)}
-						| column #{i} of #{max}
-					| #{new String(`</div>`)}
-				| #{new String(`</div>`)}
-				-i++
+			span= new String(`<div class="row no-wrap">`) + '\n\t'
+				-var i = 1
+				while i <= max
+					span= new String(`<div class="grid">`)
+						span column #{i} of #{max}
+					span= new String(`</div>`)
+					-i++
+					//- fix an issue of space/tab for highlight
+					=(i != max+1) ? '\n\t' : '\n'
+			span= new String(`</div>`)
 	h3 with wrapping
 	p show #{max} columns in every screen with wrapping mode
 	.row
+		-var i = 1
 		while i <= max
 			.grid
 				.box.
 					column #{i} of #{max}
 			-i++
+	pre
+		code.html
+			span= new String(`<div class="row">`) + '\n\t'
+				-var i = 1
+				while i <= max
+					span= new String(`<div class="grid">`)
+						span column #{i} of #{max}
+					span= new String(`</div>`)
+					-i++
+					//- fix an issue of space/tab for highlight
+					=(i != max+1) ? '\n\t' : '\n'
+			span= new String(`</div>`)

@@ -129,7 +129,8 @@ gulp.task('build-docs-task', [
   'sass-task',
   'docs-sass-task:build',
   'docs-css-task:build',
-  'docs-js-task:build',
+	'docs-js-task:build',
+	'build-css-task',
 ]);
 
 // server & hotReload taks
