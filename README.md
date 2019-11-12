@@ -4,20 +4,22 @@ A simple grid system with 5 screen sizes (xs, sm, md, lg, xl) based on bootstrap
 
 ## Install
 avaliable installing ways
-+ npm
-```npm install --save @kech/grid-system```
-+ yarn
-```yarn add --save @kech/grid-system```
-+ Download
++ CDN  
+```https://mohssineaboutaj.github.io/grid-system/css/grid-system.min.css```
++ NPM  
+```npm install --save @mohssineaboutaj/grid-system```
++ Yarn  
+```yarn add --save @mohssineaboutaj/grid-system```
++ Download  
 go to [https://github.com/mohssineAboutaj/grid-system](https://github.com/mohssineAboutaj/grid-system), download the zip or clone the repo, copy css file exist on the path `css/grid-system.css` or `css/grid-system.min.css`, then follow usage steps bellow
 
 ## Usage
 
-1. ##### Import css file
+### 1. Import css file
 ``<link rel="stylesheet" href=PATH_OF_CSS_FILE />``
 <b>Note: dont forget to replace the <i>PATH_OF_CSS_FILE</i> with a real path of the css file</b>
 
-2. ##### Use css classes
+### 2. Use css classes
 ```
 <div class="row">
 	<div class="grid-6-md">

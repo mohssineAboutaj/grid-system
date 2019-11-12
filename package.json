@@ -1,6 +1,7 @@
 {
-  "name": "@kech/grid-system",
-  "version": "1.0.0",
+  "name": "@mohssineaboutaj/grid-system",
+	"version": "1.0.0",
+	"private": false,
   "description": "A simple grid system with 4 screen sizes (sm, md, lg, xl) based on bootstrap sizes to make your design responsive with maximum media resolutions",
   "main": "gulpfile.js",
   "scripts": {
