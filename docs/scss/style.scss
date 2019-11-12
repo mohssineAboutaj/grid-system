@@ -92,19 +92,18 @@ p {
 
 /* Start sidebar */
 aside {
-	background-color: colors('secondary');
 	position: relative;
-
+	
 	.sidebar {
+		background-color: colors('secondary');
 		padding: 10px;
-		position: absolute;
-		width: 100%;
+		position: fixed;
+		width: inherit;
 		height: 100%;
 		top: 0;
 		left: 0;
-		right: 0;
 		bottom: 0;
-		overflow: hidden;
+		overflow: scroll;
 
 		.brand, .logo {
 			font-family: fonts('primary');
@@ -136,6 +135,7 @@ main {
 		padding: 10px;
 		margin: 10px 0;
 	}
+
 	#install {
 		li {
 			font-family: fonts('secondary');

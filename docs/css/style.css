@@ -43,18 +43,17 @@ p {
 /* End global classes */
 /* Start sidebar */
 aside {
-  background-color: #e6e6e6;
   position: relative; }
   aside .sidebar {
+    background-color: #e6e6e6;
     padding: 10px;
-    position: absolute;
-    width: 100%;
+    position: fixed;
+    width: inherit;
     height: 100%;
     top: 0;
     left: 0;
-    right: 0;
     bottom: 0;
-    overflow: hidden; }
+    overflow: scroll; }
     aside .sidebar .brand, aside .sidebar .logo {
       font-family: "Montserrat", sans-serif;
       font-weight: 400;
