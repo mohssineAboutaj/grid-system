@@ -46,6 +46,13 @@ html, body {
 /* End reset */
 
 /* Start global classes */
+.brand, .logo {
+	font-family: fonts('primary');
+	font-weight: 400;
+	font-size: 1.5em;
+	@extend .text-uppercase;
+}
+
 .box {
 	background-color: colors('primary');
 	height: 50px;
@@ -64,11 +71,11 @@ html, body {
 	text-align: center;
 }
 
-%text-capitalize {
+.text-capitalize {
 	text-transform: capitalize;
 }
 
-%text-uppercase {
+.text-uppercase {
 	text-transform: uppercase;
 }
 
@@ -76,7 +83,7 @@ html, body {
 	font-family: fonts('primary');
 	color: colors(third);
 	font-weight: 700;
-	@extend %text-capitalize;
+	@extend .text-capitalize;
 }
 
 @for $i from 1 through 6 {
@@ -89,6 +96,31 @@ p {
 	font-family: fonts('secondary');
 }
 /* End global classes */
+
+/* Start navbar */
+nav {
+	height: 50px;
+	overflow: hidden;
+
+	.navbar {
+		position: fixed;
+		top: 0;
+		height: inherit;
+		width: 100%;
+		background-color: colors('secondary');
+		padding: 10px;
+
+		.icon {
+			margin: 0 20px 0 10px;
+			cursor: pointer;
+		}
+
+		.logo {
+			@extend .text-center;
+		}
+	}
+}
+/* End navbar */
 
 /* Start sidebar */
 aside {
@@ -103,14 +135,7 @@ aside {
 		top: 0;
 		left: 0;
 		bottom: 0;
-		overflow: scroll;
-
-		.brand, .logo {
-			font-family: fonts('primary');
-			font-weight: 400;
-			font-size: 1.5em;
-			@extend %text-uppercase;
-		}
+		overflow: auto;
 
 		.content-list {
 			list-style-type: none;
@@ -140,7 +165,7 @@ main {
 		li {
 			font-family: fonts('secondary');
 			font-weight: 700;
-			@extend %text-uppercase;
+			@extend .text-uppercase;
 		}
 	}
 }

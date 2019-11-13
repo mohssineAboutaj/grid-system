@@ -19,6 +19,7 @@ let rootDir = "./",
 				'./node_modules/highlightjs/highlight.pack.min.js',
       ],
       cssList = [
+				'./node_modules/@fortawesome/fontawesome-free/css/all.min.css',
         './node_modules/highlightjs/styles/monokai-sublime.css',
         './css/grid-system.css',
       ];

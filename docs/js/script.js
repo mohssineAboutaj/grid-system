@@ -3,3 +3,7 @@
  */
 
  hljs.initHighlightingOnLoad();
+
+// sidebar visibility toggle
+
+//let toggler = document.getElementById('sidebar-toggler');

@@ -12,9 +12,11 @@ html(lang="en")
 			.row
 				aside.grid-2-md
 					//- include sidebar
-					include partials/sidebar
-
+					include partials/sidebar.pug
 				main.grid-10-md
+					//- include navbar
+					include partials/navbar.pug
+
 					//- include overview section
 					include sections/overview.pug
 
