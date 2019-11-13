@@ -46,6 +46,12 @@ html, body {
 /* End reset */
 
 /* Start global classes */
+body {
+	max-width: 1500px;
+	width: 95%;
+	margin: 0 auto;
+}
+
 .brand, .logo {
 	font-family: fonts('primary');
 	font-weight: 400;
@@ -59,12 +65,6 @@ html, body {
 	margin: 10px;
 	padding: 5px;
 	border: 1px solid #888;
-}
-
-.container {
-	max-width: 1500px;
-	width: 95%;
-	margin: 0 auto;
 }
 
 .text-center {
@@ -94,6 +94,10 @@ html, body {
 
 p {
 	font-family: fonts('secondary');
+}
+
+.hide {
+	display: none;
 }
 /* End global classes */
 
@@ -178,11 +182,3 @@ footer {
 	margin: 0;
 }
 /* End footer */
-
-/* Start query customize */
-@media (max-width: 576px) {
-	.container {
-		width: 100%;
-	}
-}
-/* End query customize */

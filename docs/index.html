@@ -17,56 +17,55 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <aside class="grid-2-md">
-          <div class="sidebar">
-            <div class="brand">grid system - Docs</div>
-            <ul class="content-list">
-              <li class="content-item"><a href="#overview">overview </a></li>
-              <li class="content-item"><a href="#install">install </a></li>
-              <li class="content-item"><a href="#usage">usage </a></li>
-              <li class="content-item"><a href="#basic">basic </a></li>
-            </ul>
+    <div class="row">
+      <aside class="grid-2-md">
+        <div class="sidebar">
+          <div class="brand">grid system - Docs</div>
+          <ul class="content-list">
+            <li class="content-item"><a href="#overview">overview </a></li>
+            <li class="content-item"><a href="#install">install </a></li>
+            <li class="content-item"><a href="#usage">usage </a></li>
+            <li class="content-item"><a href="#basic">basic </a></li>
+          </ul>
+        </div>
+      </aside>
+      <main class="grid-10-md">
+        <nav id="navbar top">
+          <div class="navbar ver-center">
+            <div class="icon" id="sidebar-toggler"><i class="fa fa-bars fa-2x"></i></div>
+            <div class="logo">grid system - Docs</div>
           </div>
-        </aside>
-        <main class="grid-10-md">
-          <nav id="navbar top">
-            <div class="navbar ver-center">
-              <div class="icon" id="sidebar-toggler"><i class="fa fa-bars fa-2x"></i></div>
-              <div class="logo">grid system - Docs</div>
-            </div>
-          </nav>
-          <div class="section" id="overview">
-            <h1>grid system</h1>
-            <p>A simple grid system with 5 screen sizes (xs, sm, md, lg, xl) based on bootstrap sizes to make your design responsive with maximum media resolutions</p>
-          </div>
-          <div class="section" id="install">
-            <h2>Install</h2>
-            <p>avaliable installing ways, choose one of them</p>
-            <ul>
-              <li>npm</li>
-              <pre><code class="html">npm install --save @mohssineaboutaj/grid-system</code></pre>
-              <li>yarn</li>
-              <pre><code class="html">yarn add --save @mohssineaboutaj/grid-system</code></pre>
-              <li>CDN</li>
-              <pre><code class="html">https://mohssineaboutaj.github.io/grid-system/css/grid-system.min.css</code></pre>
-              <li>Download</li>go to <a href="https://github.com/mohssineAboutaj/grid-system">https://github.com/mohssineAboutaj/grid-system</a>, download the zip or clone the repo, copy css file exist on the path 
-              <pre><code class="html">css/grid-system.css</code></pre> or 
-              <pre><code class="html">css/grid-system.min.css</code></pre> then follow usage steps bellow
-            </ul>
-            <div class="box"><b>NOTE: </b>If you wanto to use <i>npm</i> or <i>yarn</i> you need to download <a href="https://nodejs.org" target="_blank">Nodejs</a></div>
-          </div>
-          <div class="section" id="usage">
-            <h2>usage</h2>
-            <ol>
-              <li>
-                <h3>Import css file</h3>
-                <pre><code class="html">&lt;link rel=&quot;stylesheet&quot; href=PATH_OF_CSS_FILE /&gt;</code></pre><b>Note: dont forget to replace the <i>PATH_OF_CSS_FILE</i> with a real path of the css file</b>
-              </li>
-              <li>
-                <h3>Use css classes</h3>
-                <pre><code class="html">&lt;div class=&quot;row&quot;&gt;
+        </nav>
+        <div class="section" id="overview">
+          <h1>grid system</h1>
+          <p>A simple grid system with 5 screen sizes (xs, sm, md, lg, xl) based on bootstrap sizes to make your design responsive with maximum media resolutions</p>
+        </div>
+        <div class="section" id="install">
+          <h2>Install</h2>
+          <p>avaliable installing ways, choose one of them</p>
+          <ul>
+            <li>npm</li>
+            <pre><code class="html">npm install --save @mohssineaboutaj/grid-system</code></pre>
+            <li>yarn</li>
+            <pre><code class="html">yarn add --save @mohssineaboutaj/grid-system</code></pre>
+            <li>CDN</li>
+            <pre><code class="html">https://mohssineaboutaj.github.io/grid-system/css/grid-system.min.css</code></pre>
+            <li>Download</li>go to <a href="https://github.com/mohssineAboutaj/grid-system">https://github.com/mohssineAboutaj/grid-system</a>, download the zip or clone the repo, copy css file exist on the path 
+            <pre><code class="html">css/grid-system.css</code></pre> or 
+            <pre><code class="html">css/grid-system.min.css</code></pre> then follow usage steps bellow
+          </ul>
+          <div class="box"><b>NOTE: </b>If you wanto to use <i>npm</i> or <i>yarn</i> you need to download <a href="https://nodejs.org" target="_blank">Nodejs</a></div>
+        </div>
+        <div class="section" id="usage">
+          <h2>usage</h2>
+          <ol>
+            <li>
+              <h3>Import css file</h3>
+              <pre><code class="html">&lt;link rel=&quot;stylesheet&quot; href=PATH_OF_CSS_FILE /&gt;</code></pre><b>Note: dont forget to replace the <i>PATH_OF_CSS_FILE</i> with a real path of the css file</b>
+            </li>
+            <li>
+              <h3>Use css classes</h3>
+              <pre><code class="html">&lt;div class=&quot;row&quot;&gt;
 	&lt;div class=&quot;grid-6-md&quot;&gt;
 		size 6 columns in medium screens &amp; up
 	&lt;/div&gt;
@@ -74,59 +73,58 @@
 		size 6 columns in medium screens &amp; up
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-              </li>
-            </ol>
-          </div>
-          <div class="section" id="basic">
-            <h2>basic grid</h2>
-            <p>A basic columns usage with & without row wrapping</p>
-            <h3>no wrapping</h3>
-            <p>show 4 columns in every screen without any wrapping</p>
-            <div class="row no-wrap row-around">
-              <div class="grid">
-                <div class="box">column 1 of 4</div>
-              </div>
-              <div class="grid">
-                <div class="box">column 2 of 4</div>
-              </div>
-              <div class="grid">
-                <div class="box">column 3 of 4</div>
-              </div>
-              <div class="grid">
-                <div class="box">column 4 of 4</div>
-              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="section" id="basic">
+          <h2>basic grid</h2>
+          <p>A basic columns usage with & without row wrapping</p>
+          <h3>no wrapping</h3>
+          <p>show 4 columns in every screen without any wrapping</p>
+          <div class="row no-wrap row-around">
+            <div class="grid">
+              <div class="box">column 1 of 4</div>
             </div>
-            <pre><code class="html"><span>&lt;div class=&quot;row no-wrap&quot;&gt;
+            <div class="grid">
+              <div class="box">column 2 of 4</div>
+            </div>
+            <div class="grid">
+              <div class="box">column 3 of 4</div>
+            </div>
+            <div class="grid">
+              <div class="box">column 4 of 4</div>
+            </div>
+          </div>
+          <pre><code class="html"><span>&lt;div class=&quot;row no-wrap&quot;&gt;
 	<span>&lt;div class=&quot;grid&quot;&gt;<span>column 1 of 4</span></span><span>&lt;/div&gt;</span>
 	<span>&lt;div class=&quot;grid&quot;&gt;<span>column 2 of 4</span></span><span>&lt;/div&gt;</span>
 	<span>&lt;div class=&quot;grid&quot;&gt;<span>column 3 of 4</span></span><span>&lt;/div&gt;</span>
 	<span>&lt;div class=&quot;grid&quot;&gt;<span>column 4 of 4</span></span><span>&lt;/div&gt;</span>
 </span><span>&lt;/div&gt;</span></code></pre>
-            <h3>with wrapping</h3>
-            <p>show 4 columns in every screen with wrapping mode</p>
-            <div class="row">
-              <div class="grid">
-                <div class="box">column 1 of 4</div>
-              </div>
-              <div class="grid">
-                <div class="box">column 2 of 4</div>
-              </div>
-              <div class="grid">
-                <div class="box">column 3 of 4</div>
-              </div>
-              <div class="grid">
-                <div class="box">column 4 of 4</div>
-              </div>
+          <h3>with wrapping</h3>
+          <p>show 4 columns in every screen with wrapping mode</p>
+          <div class="row">
+            <div class="grid">
+              <div class="box">column 1 of 4</div>
             </div>
-            <pre><code class="html"><span>&lt;div class=&quot;row&quot;&gt;
+            <div class="grid">
+              <div class="box">column 2 of 4</div>
+            </div>
+            <div class="grid">
+              <div class="box">column 3 of 4</div>
+            </div>
+            <div class="grid">
+              <div class="box">column 4 of 4</div>
+            </div>
+          </div>
+          <pre><code class="html"><span>&lt;div class=&quot;row&quot;&gt;
 	<span>&lt;div class=&quot;grid&quot;&gt;<span>column 1 of 4</span></span><span>&lt;/div&gt;</span>
 	<span>&lt;div class=&quot;grid&quot;&gt;<span>column 2 of 4</span></span><span>&lt;/div&gt;</span>
 	<span>&lt;div class=&quot;grid&quot;&gt;<span>column 3 of 4</span></span><span>&lt;/div&gt;</span>
 	<span>&lt;div class=&quot;grid&quot;&gt;<span>column 4 of 4</span></span><span>&lt;/div&gt;</span>
 </span><span>&lt;/div&gt;</span></code></pre>
-          </div>
-        </main>
-      </div>
+        </div>
+      </main>
     </div>
     <script src="./js/docs.script.js"></script>
     <script src="./js/script.js"></script>

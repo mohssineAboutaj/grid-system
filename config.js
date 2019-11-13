@@ -16,6 +16,7 @@ let rootDir = "./",
       pugMain = pugFolder + "index.pug",
       cssFolder = rootDir + "css/",
       jsList = [
+				'./node_modules/js-cookie/src/js.cookie.js',
 				'./node_modules/highlightjs/highlight.pack.min.js',
       ],
       cssList = [
