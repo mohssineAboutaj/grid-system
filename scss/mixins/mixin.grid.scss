@@ -1,9 +1,15 @@
 // mixin to generate grid
-@mixin grid-generator($size, $sufix) {
+@mixin grid-generator($size, $screen, $sufix: "") {
 	@media #{$size} {
 		@for $i from $base-grid through $max-grid {
-			.grid-#{$i}-#{$sufix} {
-				width: ($i / $max-grid) * 100%;
+			@if ($sufix != "") {
+				.#{$screen}-#{$i}-#{$sufix} {
+					width: ($i / $max-grid) * 100%;
+				}
+			} @else {
+				.#{$screen}-#{$i} {
+					width: (($i / $max-grid) * 100%) !important;
+				}
 			}
 		}
 	}

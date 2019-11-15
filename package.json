@@ -1,6 +1,6 @@
 {
   "name": "@mohssineaboutaj/grid-system",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "private": false,
   "description": "A simple grid system with 4 screen sizes (sm, md, lg, xl) based on bootstrap sizes to make your design responsive with maximum media resolutions",
   "main": "gulpfile.js",
@@ -9,6 +9,7 @@
     "dev": "gulp",
     "build:css": "rm -fr css/ && gulp build-css-task",
     "build": "gulp build-docs-task && cp css/*.css docs/css/",
+    "test": "node ./node_modules/.bin/jasmine JASMINE_CONFIG_PATH=jasmine.json",
     "deploy": "gh-pages -d docs"
   },
   "keywords": [
@@ -35,7 +36,8 @@
     "gulp-concat-css": "^3.1.0",
     "gulp-pug": "^4.0.1",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^4.0.2",
+    "jasmine": "^3.5.0"
   },
   "repository": {
     "type": "git",

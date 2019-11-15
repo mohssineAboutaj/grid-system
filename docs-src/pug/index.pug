@@ -9,10 +9,10 @@ html(lang="en")
 	body
 
 		.row
-			aside.grid-2-md
+			aside.grid.sm-3-and-up
 				//- include sidebar
 				include partials/sidebar.pug
-			main.grid-10-md
+			main.grid.sm-9-and-up
 				//- include navbar
 				include partials/navbar.pug
 
@@ -24,6 +24,9 @@ html(lang="en")
 
 				//- include usage section
 				include sections/usage.pug
+
+				//- include browser support section
+				include sections/browser-support.pug
 
 				//- include basic section
 				include sections/basic.pug

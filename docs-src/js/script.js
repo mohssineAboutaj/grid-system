@@ -12,9 +12,13 @@ hljs.initHighlightingOnLoad();
  */
 let toggler = document.getElementById('sidebar-toggler'),
 		sidebar = document.querySelector('aside'),
+		sidebarChild = sidebar.querySelector('.sidebar'),
 		smValue = 576,
 		hideClass = "hide",
 		cookieName = "grid_system_sidebar_visibility";
+
+// fix an issue in sidebarChild
+sidebarChild.style.width = sidebar.clientWidth - 20 + "px";
 
 // toggle sidebar when the click event
 toggler.onclick = function() {

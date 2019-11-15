@@ -35,3 +35,15 @@
 	@extend .vertical-center;
 	@extend .horizontal-center;
 }
+
+.grid {
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+@for $i from $base-grid to $max-grid {
+	.grid-#{$i} {
+		@extend .grid;
+		width: ($i / $max-grid) * 100%;
+	}
+}

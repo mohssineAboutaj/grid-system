@@ -14,7 +14,7 @@
 	// map of these colors
 	$fonts-list: (
 		'primary': $primary-font,
-		'secondary': $secondary-font
+		'secondary': $secondary-font,
 	);
 
 	// return a colors by argument value
@@ -31,6 +31,8 @@
 		primary: $primary,
 		secondary: lighten($primary, 10%),
 		third: darken($primary, 50%),
+		dark: darken($primary, 90%),
+		light: lighten($primary, 90%),
 	);
 
 	// return a colors by argument value
@@ -48,8 +50,6 @@ html, body {
 /* Start global classes */
 body {
 	max-width: 1500px;
-	width: 95%;
-	margin: 0 auto;
 }
 
 .brand, .logo {
@@ -134,7 +134,6 @@ aside {
 		background-color: colors('secondary');
 		padding: 10px;
 		position: fixed;
-		width: inherit;
 		height: 100%;
 		top: 0;
 		left: 0;
@@ -161,7 +160,7 @@ aside {
 /* Start main content */
 main {
 	.section {
-		padding: 10px;
+		padding: 10px 20px;
 		margin: 10px 0;
 	}
 
@@ -170,6 +169,31 @@ main {
 			font-family: fonts('secondary');
 			font-weight: 700;
 			@extend .text-uppercase;
+		}
+	}
+
+	#browser-support {
+		table {
+			width: 100%;
+
+			tr:nth-child(even) {
+				background-color: colors('secondary');
+			}
+
+			th {
+				padding: 20px;
+				font-weight: bold;
+				@extend .text-capitalize;
+			}
+
+			td {
+				padding: 10px 20px;
+				@extend .text-capitalize;
+			}
+
+			.brand {
+				color: colors('third');
+			}
 		}
 	}
 }

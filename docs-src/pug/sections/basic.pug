@@ -5,10 +5,10 @@
 	p A basic columns usage with & without row wrapping
 	h3 no wrapping
 	p show #{max} columns in every screen without any wrapping
-	.row.no-wrap.row-around
+	.row.no-wrap
 		-var i = 1
 		while i <= max
-			.grid
+			.grid.sm-3
 				.box.
 					column #{i} of #{max}
 			-i++
