@@ -1,8 +1,8 @@
 /**
- * Name: @grid-system-kech
- * Description: A simple grid system with 4 screen sizes (sm, md, lg, xl) build using [Flex-box](https://www.w3schools.com/css/css3_flexbox.asp) CSS3 prooperties & it based on bootstrap sizes to make your design responsive with maximum media resolutions
+ * Name: @mohssineaboutaj/grid-system
+ * Description: A simple grid system with 4 screen sizes (sm, md, lg, xl) build using [Flex-box](https://www.w3schools.com/css/css3_flexbox.asp) CSS3 prooperties & it based on bootstrap media query sizes to make your design responsive with maximum media resolutions
  * Authour: @mohssineAboutaj
- * Repo URL: https://github.com/mohssineAboutaj/grid-system-kech
+ * Repo URL: https://github.com/mohssineAboutaj/grid-system
  */
 .row, .row.no-wrap, .row-around, .row-between, .horizontal-center, .full-centering,
 .hor-center, .vertical-center,
@@ -794,3 +794,137 @@
     width: 91.66667%; }
   .xl-12-only {
     width: 100%; } }
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  max-width: 1776px; }
+
+@media only screen and (min-width: 577px) {
+  .container {
+    width: 564.48px; } }
+
+@media only screen and (min-width: 769px) {
+  .container {
+    width: 752.64px; } }
+
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 972.16px; } }
+
+@media only screen and (min-width: 1201px) {
+  .container {
+    width: 1176px; } }
+
+@media only screen and (min-width: 577px) {
+  .hide-sm {
+    display: none; } }
+
+@media only screen and (min-width: 769px) {
+  .hide-md {
+    display: none; } }
+
+@media only screen and (min-width: 993px) {
+  .hide-lg {
+    display: none; } }
+
+@media only screen and (min-width: 1201px) {
+  .hide-xl {
+    display: none; } }
+
+@media only screen and (min-width: 577px) {
+  .hide-sm-and-up {
+    display: none; } }
+
+@media only screen and (min-width: 769px) {
+  .hide-md-and-up {
+    display: none; } }
+
+@media only screen and (min-width: 993px) {
+  .hide-lg-and-up {
+    display: none; } }
+
+@media only screen and (min-width: 1201px) {
+  .hide-xl-and-up {
+    display: none; } }
+
+@media only screen and (min-width: 577px) {
+  .hide-sm-and-down {
+    display: none; } }
+
+@media only screen and (min-width: 769px) {
+  .hide-md-and-down {
+    display: none; } }
+
+@media only screen and (min-width: 993px) {
+  .hide-lg-and-down {
+    display: none; } }
+
+@media only screen and (min-width: 1201px) {
+  .hide-xl-and-down {
+    display: none; } }
+
+@media only screen and (max-width: 576px) {
+  .hide-sm-only {
+    display: none; } }
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .hide-md-only {
+    display: none; } }
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .hide-lg-only {
+    display: none; } }
+
+@media only screen and (min-width: 1201px) {
+  .hide-xl-only {
+    display: none; } }
+
+@media only screen and (min-width: 577px) {
+  .hide-sm-and-up {
+    display: none; } }
+
+@media only screen and (min-width: 769px) {
+  .hide-md-and-up {
+    display: none; } }
+
+@media only screen and (min-width: 993px) {
+  .hide-lg-and-up {
+    display: none; } }
+
+@media only screen and (min-width: 1201px) {
+  .hide-xl-and-up {
+    display: none; } }
+
+@media only screen and (min-width: 577px) {
+  .hide-sm-and-up {
+    display: none; } }
+
+@media only screen and (min-width: 769px) {
+  .hide-md-and-up {
+    display: none; } }
+
+@media only screen and (min-width: 993px) {
+  .hide-lg-and-up {
+    display: none; } }
+
+@media only screen and (min-width: 1201px) {
+  .hide-xl-and-up {
+    display: none; } }
+
+@media only screen and (max-width: 576px) {
+  .hide-sm-only {
+    display: none; } }
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .hide-md-only {
+    display: none; } }
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .hide-lg-only {
+    display: none; } }
+
+@media only screen and (min-width: 1201px) {
+  .hide-xl-only {
+    display: none; } }

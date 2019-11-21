@@ -1,6 +1,6 @@
 /**
  * this file use to define the @paths for @gulpJs file
- * content:
+ * contents:
  *** @port
  *** @root_directory
  *** @css_files_and_folders_path

@@ -7,6 +7,7 @@ const gulp = require('gulp'),
       gulpRename = require('gulp-rename'),
 			gulpAutoprefixer = require('gulp-autoprefixer'),
 			gulpCssMinify = require('gulp-clean-css'),
+			gulpBabel = require('gulp-babel'),
       config = require('./config');
 
 // get path of files & folder
@@ -51,7 +52,7 @@ gulp.task('build-css-task', ['sass-task'], () => {
 
   return gulp.src(sassMain)
         .pipe(gulpSass({
-          outputStyle: 'compressed',
+          outputStyle: 'compact',
         }))
         .pipe(gulpRename(fileAfterRenaming))
         .pipe(gulpAutoprefixer())
@@ -73,7 +74,7 @@ gulp.task('pug-task', () => {
 // javaScript task for docs
 gulp.task('docs-js-task', () => {
   gulp.src(jsList)
-      .pipe(gulpConcatJs("docs.script.js"))
+			.pipe(gulpConcatJs("docs.script.js"))
       .pipe(gulp.dest(docsJs))
       .pipe(browserSync.stream())
 });
@@ -82,8 +83,13 @@ gulp.task('docs-js-task', () => {
 gulp.task('docs-js-task:build', () => {
 	gulp.src(jsList)
       .pipe(gulpConcatJs("docs.script.js"))
+			.pipe(gulpBabel({
+				presets: ['@babel/env'],
+				compact: true,
+				comments: false,
+			}))
+			.on('error', handleErr)
 			.pipe(gulp.dest(docsJs))
-      .pipe(browserSync.stream())
 });
 
 // css task for docs
@@ -100,7 +106,6 @@ gulp.task('docs-css-task:build', () => {
 			.pipe(gulpConcatCss("docs.style.css"))
 			.pipe(gulpCssMinify())
       .pipe(gulp.dest(docsCss))
-      .pipe(browserSync.stream())
 });
 
 // sass task for docs
@@ -120,7 +125,6 @@ gulp.task('docs-sass-task:build', () => {
 			}))
 			.on('error', handleErr)
 			.pipe(gulp.dest(docsCss))
-			.pipe(browserSync.stream())
 });
 
 // build docs task

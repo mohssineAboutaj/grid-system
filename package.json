@@ -1,8 +1,8 @@
 {
   "name": "@mohssineaboutaj/grid-system",
-  "version": "1.0.51",
+  "version": "1.1.0",
   "private": false,
-  "description": "A simple grid system with 4 screen sizes (sm, md, lg, xl) based on bootstrap sizes to make your design responsive with maximum media resolutions",
+  "description": "A simple grid system with 4 screen sizes (sm, md, lg, xl) based on bootstrap media query sizes to make your design responsive with maximum media resolutions",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
@@ -16,9 +16,11 @@
     "gulp",
     "sass",
     "scss",
+    "design",
     "responsive",
     "grid",
-    "grid system"
+    "grid system",
+    "flexbox"
   ],
   "author": "Mohssine Aboutaj",
   "license": "MIT",
@@ -27,9 +29,14 @@
     "> 2%"
   ],
   "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@fortawesome/fontawesome-free": "^5.11.2",
     "browser-sync": "^2.26.7",
+    "gh-pages": "^2.1.1",
     "gulp": "3.9.0",
     "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-cli": "^2.2.0",
     "gulp-concat": "^2.6.1",
@@ -37,7 +44,9 @@
     "gulp-pug": "^4.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "jasmine": "^3.5.0"
+    "highlightjs": "^9.16.2",
+    "jasmine": "^3.5.0",
+    "js-cookie": "^2.2.1"
   },
   "repository": {
     "type": "git",
@@ -47,10 +56,5 @@
     "url": "https://github.com/mohssineAboutaj/grid-system/issues"
   },
   "homepage": "https://mohssineAboutaj.github.io/grid-system",
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.11.2",
-    "gh-pages": "^2.1.1",
-    "highlightjs": "^9.16.2",
-    "js-cookie": "^2.2.1"
-  }
+  "dependencies": {}
 }

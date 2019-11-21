@@ -9,7 +9,7 @@
     <!-- Title of the website-->
     <title>grid system - Docs</title>
     <!-- SEO meta tags-->
-    <meta name="description" content="A simple grid system with 4 screen sizes (sm, md, lg, xl) based on bootstrap sizes to make your design responsive with maximum media resolutions">
+    <meta name="description" content="A simple grid system with 4 screen sizes (sm, md, lg, xl) based on bootstrap media query sizes to make your design responsive with maximum media resolutions">
     <meta name="author" content="Mohssine Aboutaj">
     <meta name="keywords" content="grid, grid system, sm, md, lg, xl, based on bootstrap, design, responsive, media resolutions, columns">
     <!-- style files (CSS files)-->
@@ -27,6 +27,8 @@
             <li class="content-item"><a href="#usage">usage </a></li>
             <li class="content-item"><a href="#browser-support">browser support </a></li>
             <li class="content-item"><a href="#basic">basic </a></li>
+            <li class="content-item"><a href="#in-one-screen">in one screen </a></li>
+            <li class="content-item"><a href="#hidden">hidden </a></li>
           </ul>
         </div>
       </aside>
@@ -43,7 +45,7 @@
         </nav>
         <div class="section" id="overview">
           <h1>grid system</h1>
-          <p>A simple grid system with 4 screen sizes (sm, md, lg, xl) build using <a href="https://www.w3schools.com/css/css3_flexbox.asp">Flex-box</a> CSS3 prooperties & it based on bootstrap sizes to make your design responsive with maximum media resolutions</p>
+          <p>A simple grid system with 4 screen sizes (sm, md, lg, xl) build using <a href="https://www.w3schools.com/css/css3_flexbox.asp">Flex-box</a> CSS3 prooperties & it based on bootstrap media query sizes to make your design responsive with maximum media resolutions</p>
         </div>
         <div class="section" id="install">
           <h2>Install</h2>
@@ -94,27 +96,27 @@
             </thead>
             <tbody>
               <tr>
-                <td class="brand"><i class="fab fa-chrome"></i></td>
+                <td class="brand"><i class="fab fa-chrome chrome"></i></td>
                 <td>chrome</td>
                 <td>29</td>
               </tr>
               <tr>
-                <td class="brand"><i class="fab fa-internet-explorer"></i></td>
+                <td class="brand"><i class="fab fa-internet-explorer internet-explorer"></i></td>
                 <td>internet explorer</td>
                 <td>11</td>
               </tr>
               <tr>
-                <td class="brand"><i class="fab fa-firefox"></i></td>
+                <td class="brand"><i class="fab fa-firefox firefox"></i></td>
                 <td>firefox</td>
                 <td>22</td>
               </tr>
               <tr>
-                <td class="brand"><i class="fab fa-safari"></i></td>
+                <td class="brand"><i class="fab fa-safari safari"></i></td>
                 <td>safari</td>
                 <td>10</td>
               </tr>
               <tr>
-                <td class="brand"><i class="fab fa-opera"></i></td>
+                <td class="brand"><i class="fab fa-opera opera"></i></td>
                 <td>opera</td>
                 <td>48</td>
               </tr>
@@ -169,6 +171,53 @@
 	<span>&lt;div class=&quot;grid&quot;&gt;<span>column 4 of 4</span></span><span>&lt;/div&gt;</span>
 </span><span>&lt;/div&gt;</span></code></pre>
         </div>
+        <div class="section" id="in-one-size">
+          <h2>in one screen</h2>
+          <p>make a special grid using <b>-only</b> suffix after your class</p>
+          <div class="row">
+            <div class="grid-6 lg-3-only">
+              <div class="box">grid 3 in lg only & grid 6 in other screens</div>
+            </div>
+            <div class="grid-6 lg-3-only">
+              <div class="box">grid 3 in lg only & grid 6 in other screens</div>
+            </div>
+            <div class="grid-6 lg-3-only">
+              <div class="box">grid 3 in lg only & grid 6 in other screens</div>
+            </div>
+            <div class="grid-6 lg-3-only">
+              <div class="box">grid 3 in lg only & grid 6 in other screens</div>
+            </div>
+          </div>
+          <pre><code class="html"><span>&lt;div class=&quot;row&quot;&gt;
+	<span>&lt;div class=&quot;grid-6 lg-3-only&quot;&gt;<span>grid 3 in lg only & grid 6 in other screens</span></span><span>&lt;/div&gt;</span>
+	<span>&lt;div class=&quot;grid-6 lg-3-only&quot;&gt;<span>grid 3 in lg only & grid 6 in other screens</span></span><span>&lt;/div&gt;</span>
+	<span>&lt;div class=&quot;grid-6 lg-3-only&quot;&gt;<span>grid 3 in lg only & grid 6 in other screens</span></span><span>&lt;/div&gt;</span>
+	<span>&lt;div class=&quot;grid-6 lg-3-only&quot;&gt;<span>grid 3 in lg only & grid 6 in other screens</span></span><span>&lt;/div&gt;</span>
+</span><span>&lt;/div&gt;</span></code></pre>
+        </div>
+        <div class="section" id="hidden">
+          <h2>hide elements</h2>
+          <p>hide elements on some screens or on one screen, resize the screen to show the effect</p>
+          <div class="row">
+            <div class="grid hide-sm-only">
+              <div class="box">grid on <b>sm</b> screen only & show in other screens</div>
+            </div>
+            <div class="grid hide-md-only">
+              <div class="box">grid on <b>md</b> screen only & show in other screens</div>
+            </div>
+            <div class="grid hide-lg-only">
+              <div class="box">grid on <b>lg</b> screen only & show in other screens</div>
+            </div>
+            <div class="grid hide-xl-only">
+              <div class="box">grid on <b>xl</b> screen only & show in other screens</div>
+            </div>
+          </div>
+          <pre><code class="html"><span><span>&lt;div class=&quot;hide-sm-only&quot;&gt;<span>hide on sm on only screen & show in other screens</span></span><span>&lt;/div&gt;
+</span></span><span><span>&lt;div class=&quot;hide-md-only&quot;&gt;<span>hide on md on only screen & show in other screens</span></span><span>&lt;/div&gt;
+</span></span><span><span>&lt;div class=&quot;hide-lg-only&quot;&gt;<span>hide on lg on only screen & show in other screens</span></span><span>&lt;/div&gt;
+</span></span><span><span>&lt;div class=&quot;hide-xl-only&quot;&gt;<span>hide on xl on only screen & show in other screens</span></span><span>&lt;/div&gt;
+</span></span></code></pre>
+        </div>
       </main>
     </div>
     <footer>
@@ -178,9 +227,9 @@
         </div>
         <div class="grid sm-6">
           <div class="row row-around">
-            <div class="grid"><a href="https://facebook.com/vive.mouhssine" target="_blank"><i class="fab fa-facebook"></i></a></div>
-            <div class="grid"><a href="https://twitter.com/mohssineAboutaj" target="_blank"><i class="fab fa-twitter"></i></a></div>
-            <div class="grid"><a href="https://www.linkedin.com/in/mohssine-aboutaj-90a874191/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+            <div class="grid"><a href="https://facebook.com/vive.mouhssine" target="_blank"><i class="fab fa-facebook facebook"></i></a></div>
+            <div class="grid"><a href="https://twitter.com/mohssineAboutaj" target="_blank"><i class="fab fa-twitter twitter"></i></a></div>
+            <div class="grid"><a href="https://www.linkedin.com/in/mohssine-aboutaj-90a874191/" target="_blank"><i class="fab fa-linkedin linkedin"></i></a></div>
           </div>
         </div>
       </div>

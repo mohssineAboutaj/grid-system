@@ -1,0 +1,36 @@
+// generate hide classes based on the mixin @hide-generator
+
+@include hide-generator($sm-and-up, 'sm');
+@include hide-generator($md-and-up, 'md');
+@include hide-generator($lg-and-up, 'lg');
+@include hide-generator($xl-and-up, 'xl');
+
+@include hide-generator($sm-and-up, 'sm', 'and-up');
+@include hide-generator($md-and-up, 'md', 'and-up');
+@include hide-generator($lg-and-up, 'lg', 'and-up');
+@include hide-generator($xl-and-up, 'xl', 'and-up');
+
+@include hide-generator($sm-and-up, 'sm', 'and-down');
+@include hide-generator($md-and-up, 'md', 'and-down');
+@include hide-generator($lg-and-up, 'lg', 'and-down');
+@include hide-generator($xl-and-up, 'xl', 'and-down');
+
+@include hide-generator($sm-only, 'sm', 'only');
+@include hide-generator($md-only, 'md', 'only');
+@include hide-generator($lg-only, 'lg', 'only');
+@include hide-generator($xl-only, 'xl', 'only');
+
+@include hide-generator($sm-and-up, 'sm', 'and-up');
+@include hide-generator($md-and-up, 'md', 'and-up');
+@include hide-generator($lg-and-up, 'lg', 'and-up');
+@include hide-generator($xl-and-up, 'xl', 'and-up');
+
+@include hide-generator($sm-and-up, 'sm', 'and-up');
+@include hide-generator($md-and-up, 'md', 'and-up');
+@include hide-generator($lg-and-up, 'lg', 'and-up');
+@include hide-generator($xl-and-up, 'xl', 'and-up');
+
+@include hide-generator($sm-only, 'sm', 'only');
+@include hide-generator($md-only, 'md', 'only');
+@include hide-generator($lg-only, 'lg', 'only');
+@include hide-generator($xl-only, 'xl', 'only');

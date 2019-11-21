@@ -1,13 +1,19 @@
 /**
- * Name: @grid-system-kech
- * Description: A simple grid system with 4 screen sizes (sm, md, lg, xl) build using [Flex-box](https://www.w3schools.com/css/css3_flexbox.asp) CSS3 prooperties & it based on bootstrap sizes to make your design responsive with maximum media resolutions
+ * Name: @mohssineaboutaj/grid-system
+ * Description: A simple grid system with 4 screen sizes (sm, md, lg, xl) build using [Flex-box](https://www.w3schools.com/css/css3_flexbox.asp) CSS3 prooperties & it based on bootstrap media query sizes to make your design responsive with maximum media resolutions
  * Authour: @mohssineAboutaj
- * Repo URL: https://github.com/mohssineAboutaj/grid-system-kech
+ * Repo URL: https://github.com/mohssineAboutaj/grid-system
  */
 @import './_variables';
 
 @import './mixins/mixin.grid.scss';
+@import './mixins/mixin.container.scss';
+@import './mixins/mixin.hide.scss';
 
 @import './_global';
 
 @import './_grid';
+
+@import './_container';
+
+@import './_hide';

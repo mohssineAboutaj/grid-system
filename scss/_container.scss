@@ -1,0 +1,11 @@
+.container {
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  max-width: $xl + $sm;
+}
+
+@include container-generator($sm-and-up, $sm);
+@include container-generator($md-and-up, $md);
+@include container-generator($lg-and-up, $lg);
+@include container-generator($xl-and-up, $xl);

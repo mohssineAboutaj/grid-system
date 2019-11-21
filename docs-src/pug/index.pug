@@ -1,6 +1,9 @@
 //- include variables
 include partials/variables
 
+//- include fixers to fix some issue
+include helpers/fix
+
 doctype
 html(lang="en")
 	head
@@ -31,6 +34,11 @@ html(lang="en")
 				//- include basic section
 				include sections/basic.pug
 
+				//- include in-one-screen section
+				include sections/in-one-screen.pug
+
+				//- include hidden section
+				include sections/hidden.pug
 
 
 

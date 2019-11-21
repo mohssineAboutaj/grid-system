@@ -11,6 +11,6 @@
 			each browser in browserSupportList
 				tr
 					td.brand
-						i(class="fab fa-" + browser.icon)
+						i(class="fab fa-" + browser.icon + " " + browser.icon)
 					td #{browser.icon.replace(/-/g, ' ')}
 					td= browser.version
