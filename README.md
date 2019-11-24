@@ -1,5 +1,8 @@
 # Grid System
 
+[![npm version](https://img.shields.io/badge/npm-1.1.0-green.svg)](https://npmjs.com/package/@mohssineaboutaj/grid-system)
+
+
 A simple grid system with 4 screen sizes (sm, md, lg, xl) build using [Flex-box](https://www.w3schools.com/css/css3_flexbox.asp) CSS3 prooperties & it based on bootstrap media query sizes to make your design responsive with maximum media resolutions
 
 ## Install
