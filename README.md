@@ -38,8 +38,8 @@ go to [https://github.com/mohssineAboutaj/grid-system](https://github.com/mohssi
 ## Documentation
 [Full documentation & more info](https://mohssineAboutaj.github.io/grid-system/)
 
-## Developer guide
-[READEM file for developer](./README.dev.md)
+## Developers & contributers guide
+[README file for developers & contributers](./README.dev.md)
 
 ## Changelog
 [Read the Changelog](./CHANGELOG.md)
