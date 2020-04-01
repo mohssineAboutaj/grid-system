@@ -57,7 +57,7 @@
   },
   "homepage": "https://mohssineAboutaj.github.io/grid-system",
   "dependencies": {},
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  }
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/"
+	}
 }
