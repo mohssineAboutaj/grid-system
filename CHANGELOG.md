@@ -12,9 +12,9 @@
 
 ## v1.0.5 Nov-15-2019 02:30
 + Change columns class structure from <br>
-	`<div class="grid-sm-X grid-md-X grid-lg-X grid-xl-X"></div>`
-	<br>to<br>
-	`<div class="grid sm-X md-X lg-X xl-X"></div>`
+  `<div class="grid-sm-X grid-md-X grid-lg-X grid-xl-X"></div>`
+  <br>to<br>
+  `<div class="grid sm-X md-X lg-X xl-X"></div>`
 + Add other grid classes like `grid-X`
 + Fix an issue in `.row` & `.grid` class
 + Add [Jasmine](https://jasmine.github.io/index.html) for `config.js` file

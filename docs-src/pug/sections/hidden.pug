@@ -1,16 +1,18 @@
 -var screens = ["sm","md","lg","xl"]
 #hidden.section
-	h2 hide elements
-	p hide elements on some screens or on one screen, resize the screen to show the effect
-	.row
-		each screen in screens
-			div(class=`grid hide-${screen}-only`)
-				.box.
-					grid on #[b #{screen}] screen only & show in other screens
-	pre
-		code.html
-			each screen in screens
-				span
-					span= new String(`<div class="hide-${screen}-only">`)
-						span hide on #{screen} on only screen & show in other screens
-					span= new String(`</div>` + '\n')
+  h2 
+    a(href="#hidden") #
+    |  hide elements
+  p hide elements on some screens or on one screen, resize the screen to show the effect
+  .row
+    each screen in screens
+      div(class=`grid hide-${screen}-only`)
+        .box.
+          grid on #[b #{screen}] screen only & show in other screens
+  pre
+    code.html
+      each screen in screens
+        span
+          span= new String(`<div class="hide-${screen}-only">`)
+            span hide on #{screen} screen only & show in other screens
+          span= new String(`</div>` + '\n')

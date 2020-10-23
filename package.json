@@ -8,7 +8,7 @@
     "start": "gulp",
     "dev": "gulp",
     "build:css": "rm -fr css/ && gulp build-css-task",
-    "build": "gulp build-docs-task && cp css/*.css docs/css/",
+    "build": "rm -fr css/ && gulp build-docs-task && cp css/*.css docs/css/",
     "test": "node ./node_modules/.bin/jasmine JASMINE_CONFIG_PATH=jasmine.json",
     "deploy": "gh-pages -d docs"
   },
@@ -56,8 +56,5 @@
     "url": "https://github.com/mohssineAboutaj/grid-system/issues"
   },
   "homepage": "https://mohssineAboutaj.github.io/grid-system",
-  "dependencies": {},
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com/"
-	}
+  "dependencies": {}
 }

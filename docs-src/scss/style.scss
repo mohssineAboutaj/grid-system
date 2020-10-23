@@ -7,101 +7,101 @@
 
 // define fonts & set a function to use it
 @function fonts($font-name) {
-	// colors
-	$primary-font: 'Montserrat', sans-serif;
-	$secondary-font: 'Open Sans', sans-serif;
+  // colors
+  $primary-font: 'Montserrat', sans-serif;
+  $secondary-font: 'Open Sans', sans-serif;
 
-	// map of these colors
-	$fonts-list: (
-		'primary': $primary-font,
-		'secondary': $secondary-font,
-	);
+  // map of these colors
+  $fonts-list: (
+    'primary': $primary-font,
+    'secondary': $secondary-font,
+  );
 
-	// return a colors by argument value
-	@return map-get($fonts-list, $font-name)
+  // return a colors by argument value
+  @return map-get($fonts-list, $font-name)
 };
 
 // define colors & set a function to use it
 @function colors($color-name) {
-	// colors
-	$primary: #ccc;
+  // colors
+  $primary: #ccc;
 
-	// map of these colors
-	$colors-list: (
-		primary: $primary,
-		secondary: lighten($primary, 10%),
-		third: darken($primary, 50%),
-		dark: darken($primary, 90%),
-		light: lighten($primary, 90%),
-	);
+  // map of these colors
+  $colors-list: (
+    primary: $primary,
+    secondary: lighten($primary, 10%),
+    third: darken($primary, 50%),
+    dark: darken($primary, 90%),
+    light: lighten($primary, 90%),
+  );
 
-	// return a colors by argument value
-	@return map-get($colors-list, $color-name)
+  // return a colors by argument value
+  @return map-get($colors-list, $color-name)
 };
 
 /* Start reset */
 html, body {
-	color: colors(third);
-	margin: 0;
-	padding: 0;
+  color: colors(third);
+  margin: 0;
+  padding: 0;
 }
 /* End reset */
 
 /* Start global classes */
 body {
-	max-width: 1500px;
+  max-width: 1500px;
 }
 
 .brand, .logo {
-	font-family: fonts('primary');
-	font-weight: 400;
-	font-size: 1.5em;
-	@extend .text-uppercase;
+  font-family: fonts('primary');
+  font-weight: 400;
+  font-size: 1.5em;
+  @extend .text-uppercase;
 }
 
 .box {
-	background-color: colors('primary');
-	min-height: 50px;
-	margin: 10px;
-	padding: 5px;
-	border: 1px solid #888;
+  background-color: colors('primary');
+  min-height: 50px;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #888;
 }
 
 .text-center {
-	text-align: center;
+  text-align: center;
 }
 
 .text-capitalize {
-	text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .text-uppercase {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .bold {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 %heading-global-style {
-	font-family: fonts('primary');
-	color: colors(third);
-	font-weight: 700;
-	@extend .text-capitalize;
+  font-family: fonts('primary');
+  color: colors(third);
+  font-weight: 700;
+  @extend .text-capitalize;
 }
 
 @for $i from 1 through 6 {
-	h#{$i} {
-		@extend %heading-global-style;
-	}
+  h#{$i} {
+    @extend %heading-global-style;
+  }
 }
 
 p {
-	font-family: fonts('secondary');
+  font-family: fonts('secondary');
 }
 
 .hide {
-	display: none;
+  display: none;
 }
 /* End global classes */
 
@@ -118,112 +118,115 @@ p {
 
 /* Start navbar */
 nav {
-	height: 50px;
-	overflow: hidden;
+  height: 50px;
+  overflow: hidden;
 
-	.navbar {
-		position: fixed;
-		top: 0;
-		height: inherit;
-		width: 100%;
-		background-color: colors('secondary');
-		padding: 10px;
+  .navbar {
+    position: fixed;
+    top: 0;
+    height: inherit;
+    width: 100%;
+    background-color: colors('secondary');
+    padding: 10px;
 
-		.icon {
-			margin: 0 20px 0 10px;
-			cursor: pointer;
-		}
+    .icon {
+      margin: 0 20px 0 10px;
+      cursor: pointer;
+    }
 
-		.logo {
-			@extend .text-center;
-		}
-	}
+    .logo {
+      @extend .text-center;
+    }
+  }
 }
 /* End navbar */
 
 /* Start sidebar */
 aside {
-	position: relative;
-	
-	.sidebar {
-		background-color: colors('secondary');
-		padding: 10px;
-		position: fixed;
-		height: 100%;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		overflow: auto;
+  position: relative;
+  
+  .sidebar {
+    background-color: colors('secondary');
+    padding: 10px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
 
-		.content-list {
-			list-style-type: none;
-			padding: 10px;
+    .content-list {
+      list-style-type: none;
+      padding: 10px;
 
-			.content-item {
-				margin: 10px 0;
+      .content-item {
+        margin: 10px 0;
 
-				a {
-					text-decoration: none;
-					text-transform: capitalize;
-					font-family: fonts('primary');
-					color: colors(third);
-				
-					&.active {
-						font-weight: 700;
-					}
-				}
-			}
-		}
-	}
+        a {
+          text-decoration: none;
+          text-transform: capitalize;
+          font-family: fonts('primary');
+          color: colors(third);
+        
+          &.active {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
 }
 /* End sidebar */
 
 /* Start main content */
 main {
-	.section {
-		padding: 10px 20px;
-		margin: 10px 0;
-	}
+  .section {
+    padding: 10px 20px;
+    margin: 10px 0;
+    h2 {
+      margin-top: 70px;
+    }
+  }
 
-	#install {
-		li {
-			font-family: fonts('secondary');
-			font-weight: 700;
-			@extend .text-uppercase;
-		}
-	}
+  #install {
+    li {
+      font-family: fonts('secondary');
+      font-weight: 700;
+      @extend .text-uppercase;
+    }
+  }
 
-	#browser-support {
-		table {
-			width: 100%;
+  #browser-support {
+    table {
+      width: 100%;
 
-			tr:nth-child(even) {
-				background-color: colors('secondary');
-			}
+      tr:nth-child(even) {
+        background-color: colors('secondary');
+      }
 
-			th {
-				padding: 20px;
-				@extend .bold;
-				@extend .text-capitalize;
-			}
+      th {
+        padding: 20px;
+        @extend .bold;
+        @extend .text-capitalize;
+      }
 
-			td {
-				padding: 10px 20px;
-				@extend .text-capitalize;
-			}
+      td {
+        padding: 10px 20px;
+        @extend .text-capitalize;
+      }
 
-			.brand {
-				color: colors('third');
-			}
-		}
-	}
+      .brand {
+        color: colors('third');
+      }
+    }
+  }
 }
 /* End main content */
 
 /* Start footer */
 footer {
-	background-color: colors('secondary');
-	padding: 20px;
-	margin: 0;
+  background-color: colors('secondary');
+  padding: 20px;
+  margin: 0;
 }
 /* End footer */

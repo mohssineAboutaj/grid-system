@@ -1,16 +1,16 @@
 // mixin to generate grid
 @mixin grid-generator($size, $screen, $suffix: "") {
-	@media #{$size} {
-		@for $i from $base-grid through $max-grid {
-			@if ($suffix != "") {
-				.#{$screen}-#{$i}-#{$suffix} {
-					width: ($i / $max-grid) * 100%;
-				}
-			} @else {
-				.#{$screen}-#{$i} {
-					width: (($i / $max-grid) * 100%) !important;
-				}
-			}
-		}
-	}
+  @media #{$size} {
+    @for $i from $base-grid through $max-grid {
+      @if ($suffix != "") {
+        .#{$screen}-#{$i}-#{$suffix} {
+          width: ($i / $max-grid) * 100%;
+        }
+      } @else {
+        .#{$screen}-#{$i} {
+          width: (($i / $max-grid) * 100%) !important;
+        }
+      }
+    }
+  }
 }

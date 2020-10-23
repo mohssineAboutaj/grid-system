@@ -1,8 +1,8 @@
 // mixin to generate container
 @mixin container-generator($size, $screenWidth) {
-	@media #{$size} {
+  @media #{$size} {
     .container {
       width: $screenWidth - (($screenWidth / 100) * 2);
     }
-	}
+  }
 }

@@ -1,14 +1,14 @@
 footer
-	.row
-		.grid.sm-6 
-			.text-center #[i(class="far fa-copyright")] 2019 - #{new Date().getFullYear()} | create by #[b #{author}]
-		.grid.sm-6
-			.row.row-around
-				each social in socialLinks
-					.grid
-						a(href=social.href, target="_blank")
-							if (social.isBrand === false)
-								i(class="fa fa-" + social.icon)
-							else
-								i(class="fab fa-" + social.icon + " " + social.icon)
+  .row
+    .grid.sm-6 
+      .text-center #[i(class="far fa-copyright")] 2019 - #{new Date().getFullYear()} | create by #[b #{author}]
+    .grid.sm-6
+      .row.row-around
+        each social in socialLinks
+          .grid
+            a(href=social.href, target="_blank")
+              if (social.isBrand === false)
+                i(class="fa fa-" + social.icon)
+              else
+                i(class="fab fa-" + social.icon + " " + social.icon)
 script(src="./js/docs.script.js")

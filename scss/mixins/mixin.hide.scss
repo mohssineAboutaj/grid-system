@@ -1,14 +1,14 @@
 // mixin to generate hide
 @mixin hide-generator($size, $screen, $suffix: "") {
-	@media #{$size} {
-		@if ($suffix != "") {
-			.hide-#{$screen}-#{$suffix} {
-				display: none;
-			}
-		} @else {
-			.hide-#{$screen} {
-				display: none;
-			}
-		}
-	}
+  @media #{$size} {
+    @if ($suffix != "") {
+      .hide-#{$screen}-#{$suffix} {
+        display: none;
+      }
+    } @else {
+      .hide-#{$screen} {
+        display: none;
+      }
+    }
+  }
 }

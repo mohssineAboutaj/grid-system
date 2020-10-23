@@ -1,21 +1,23 @@
 #in-one-size.section
-	h2 in one screen
-	p make a special grid using #[b -only] suffix after your class
-	.row
-		-var i = 1
-		while i <= 4
-			.grid-6.lg-3-only
-				.box.
-					grid 3 in lg only & grid 6 in other screens
-			-i++
-	pre
-		code.html
-			span= new String(`<div class="row">` + '\n\t')
-				-var i = 1
-				while i <= max
-					span= new String(`<div class="grid-6 lg-3-only">`)
-						span grid 3 in lg only & grid 6 in other screens
-					span= new String(`</div>`)
-					-i++
-					+hlBr(i, max)
-			span= new String(`</div>`)
+  h2 
+    a(href="#in-one-size") #
+    |  in one screen
+  p make a special grid using #[b -only] suffix after your class
+  .row
+    -var i = 1
+    while i <= 4
+      .grid-6.lg-3-only
+        .box.
+          grid 3 in lg only & grid 6 in other screens
+      -i++
+  pre
+    code.html
+      span= new String(`<div class="row">` + '\n\t')
+        -var i = 1
+        while i <= max
+          span= new String(`<div class="grid-6 lg-3-only">`)
+            span grid 3 in lg only & grid 6 in other screens
+          span= new String(`</div>`)
+          -i++
+          +hlBr(i, max)
+      span= new String(`</div>`)

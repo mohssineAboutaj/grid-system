@@ -1,9 +1,9 @@
 .sidebar
-	.brand #{title}
+  .brand #{title}
 
-	ul.content-list
-		//- sidebarLink exist in variables.pug 
-		each link in sidebarLinks
-			li.content-item
-				a(href=`#${link.replace(/ /g, '-').toLowerCase()}`).
-					#{link.replace(/-/g, ' ')} 
+  ul.content-list
+    //- sidebarLink exist in variables.pug 
+    each link in sidebarLinks
+      li.content-item
+        a(href=`#${link.replace(/ /g, '-').toLowerCase()}`).
+          #{link.replace(/-/g, ' ')} 
